@@ -144,10 +144,8 @@
          <script>
              var equipesm ={{ Js::from($equipes)}}
              var datem ={{ Js::from($consultation->Date_consultation)}}
-             (datem);
             var patientsm ={{ Js::from($patients)}}
             var patientselectm = document.querySelectorAll('#patientm')
-            (patientselectm);
             var inputsdatem = document.querySelectorAll('.pmedcinm')
 
             var pselect;

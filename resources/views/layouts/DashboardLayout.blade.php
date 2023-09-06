@@ -135,15 +135,13 @@
             const avatar = document.querySelector(".avatar")
             const content = document.querySelector(".wrapperAdmim")
 
-            (names)
-            fullSize = true
+            let fullSize = true
 
             toggle.addEventListener("click",()=>{
 
                 if(fullSize){
                     sidebar.style.width = "60px"
                     names.forEach(name=>{
-                        (name)
                         name.classList.toggle("hide")
                     })
                     avatar.style.width = "30px";
@@ -153,7 +151,6 @@
 
                 }else{
                     names.forEach(name=>{
-                        (name)
                         name.classList.toggle("hide")
                     })
                     sidebar.style.width="20%"

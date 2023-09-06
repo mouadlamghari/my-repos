@@ -230,14 +230,11 @@
                 method: "POST",
                 data: formData,
                 success: function(response) {
-                    (response);
                     location.reload();
                 },
                 error: function(xhr, status, error) {
                     $('.error-message').html('')
-                    (xhr.responseText);
                     var errors = JSON.parse(xhr.responseText);
-                    (errors)
                     $.each(errors.errors, function(key, value) {
                         $('.error-message').html('')
                         $('.error-message').append(`<p class='text-danger'>${value}</p>`);

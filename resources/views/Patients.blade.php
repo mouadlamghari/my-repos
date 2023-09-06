@@ -175,7 +175,6 @@
 @if ($errors->any())
 <script>
     let ppp = document.querySelector('#zer');
-    (ppp)
     ppp.click();
 </script>
 @endif
@@ -204,11 +203,9 @@
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    (response);
                 },
                 error: function(xhr, status, error) {
                     var errors = JSON.parse(xhr.responseText);
-                    (errors);
                     $('.mb-3 p.text-danger').remove();
                     $.each(errors.errors, function(key, value) {
                          $('[name="' + key + '"]').closest('.mb-3').append('<p class="text-danger">' + value[0] + '</p>');
@@ -250,7 +247,6 @@ closeModalButtons.forEach(close=>{
 
 showModals.forEach(showModal=>{
     showModal.addEventListener('click',()=>{
-        (showModal)
         modals.forEach(modal=>{
             if(modal.id==showModal.id){
                 modal.classList.remove("hide")
@@ -260,7 +256,6 @@ showModals.forEach(showModal=>{
 })
 
 let files = document.querySelectorAll('input[type="file"]')
-            (files)
             files.forEach(file=>file.onchange=(e)=>{
                 let url = URL.createObjectURL(e.target.files[0])
                 let thumb = file.closest('div').querySelector('#ll')

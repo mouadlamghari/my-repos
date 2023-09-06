@@ -74,7 +74,6 @@
     const dateFilter = document.querySelector(".date-filter")
 
     select.addEventListener("change",()=>{
-        (select.value)
         if(select.value==="consultations"){
             dateFilter.classList.remove("hide")
 
