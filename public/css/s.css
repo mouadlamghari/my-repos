@@ -152,9 +152,7 @@ canvas#pie,canvas#pie2{
 .result li{
     width: 100%;
 }
-.name:hover{
-    background: lightgray;
-}
+
 
 .ADMIN {
     background: #ebf9eb;
