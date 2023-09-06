@@ -1,0 +1,95 @@
+.content {
+    padding: 1rem;
+    display: grid;
+    gap: 3rem;
+    align-content: center;
+    max-width: 100%;
+}
+
+select {
+    background: none;
+    border: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.filters form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 2rem;
+}
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.hide {
+    display: none;
+}
+.consultation,
+.peopleCard {
+    box-shadow: 1px 1px 3px gray;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    min-width: 85%;
+    margin: auto;
+}
+
+.peopleCard .avatar-info,
+.consultation .avatar-info {
+    display: flex;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+.peopleCard .avatar-info .avatar,
+.consultation .avatar-info .avatar {
+    width: 40px;
+    aspect-ratio: 1;
+    background: yellow;
+    border-radius: 50%;
+}
+.peopleCard .avatar-info .info,
+.consultation .avatar-info .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.peopleCard .avatar-info .info .job,
+.consultation .avatar-info .info .job {
+    font-weight: 300;
+    /* color: darkgray; */
+}
+.date-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.filters input[type="date"] {
+    padding: 0.5rem 0.75rem;
+    border: none;
+
+}
+
+.filters form button{
+    padding: 0.5rem 0.75rem;
+    border: none;
+    background-color: white;
+
+
+}
+.filters form button:hover{
+    background-color: #163dcd;
+    color: white;
+}

@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@800&family=Kanit&family=Mochiy+Pop+One&family=Montserrat:wght@200;500;800;900&family=Oswald:wght@200;400;700&family=Poppins:wght@400;500;600;700;800;900&family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", Sans-serif;
+}
+html{
+    background: #c2bdbd28;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+    color: black;
+}
+
+.c-container{
+    max-width: 100%;
+
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+
+.c-container-two{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* background-color: red; */
+    width: 100%;
+    /* background-color: blue; */
+    height: 120%;
+    justify-items:end;
+}
+.c-container-two:nth-child(2){
+    width: max-content;
+}
+canvas{
+    width: 100% !important;
+    height:100% !important;
+    /* height: 450px !important; */
+
+}
+canvas#pie,canvas#pie2{
+    width: 400px !important;
+    height: max-content !important;
+}
+
+
+.stateItems {
+    display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.ItemsStateComponent {
+    flex: 1;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 250px;
+}
+
+.H-ItemsStateComponent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.result {
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    font-size: .95rem;
+
+
+}
+
+
+
+
+
+
+
+.result-item {
+    padding: 0.5rem 0.75rem;
+    display: block;
+}
+
+
+
+
+.NameState {
+    font-size: 20px;
+    color: #646060;
+}
+
+.role {
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    gap: 0.25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.role-name{
+
+    color: darkgray;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.names{
+
+    width: 100%;
+    padding: 0 7px;
+    padding: 0;
+    display: block;
+    font-size: 500;
+    font-size: .85rem;
+}
+.result .name{
+    font-size: .8rem;
+    padding: .5rem .75rem;
+    font-weight: 400;
+
+}
+.result li{
+    width: 100%;
+}
+.name:hover{
+    background: lightgray;
+}
+
+.ADMIN {
+    background: #ebf9eb;
+    color: #84d784;
+}
+.ASSISTANT {
+    background-color: #fdebeb;
+    color: #f16262;
+}
+
+.MEDECIN-CARD {
+    background-color: #fef8e8;
+    color: #f4c746;
+}
+
+.INFERMIER {
+    color: #8282ff;
+    background-color: #cce5ff;
+}
+
+.C-ItemsStateComponent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.T-ItemsStateComponent {
+    font-size: 35px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.I-ItemsStateComponent {
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.btnAj {
+    background-color: #163dcd !important;
+}
+
+.DashbordMain {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #c2bdbd28;
+}
+.sidebar .toggle {
+    position: absolute;
+    right: 0;
+    background: #163dcd;
+    color: white;
+    translate: 50%;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.25rem;
+    border: 1px solid #163dcd;
+}
+.sidebar {
+    width: 20%;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-inline: 1rem;
+    transition: all 0.6s ease;
+    height: 100vh;
+    left: 0;
+    gap: 2rem;
+    position: fixed;
+
+    top: 0;
+}
+.sidebar a {
+    color: black;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+}
+.sidebar-links {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.sidebar a:hover:not(.logout),
+.active {
+    background: #163dcd;
+    color: white !important;
+    border: 1px solid #163dcd;
+}
+.sidebar .top-part {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sidebar .top-part .avatar {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    background-color: #163dcd;
+    border-radius: 50%;
+}
+.sidebar .top-part .name-job {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.sidebar .top-part .name-job .job {
+    font-size: 0.8rem;
+}
+.sidebar .bottom-part {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding-block: 1rem;
+    align-content: space-between;
+    height: 100%;
+}
+.WrapperAdmim {
+    padding: 20px;
+    float: right;
+    width: 75%;
+    transition: all 0.6s ease;
+    min-height: 100vh;
+}
+form {
+    width: 100%;
+}
+
+form .logout {
+    display: flex;
+    gap: 10px;
+    color: white !important;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background-color: #163dcd;
+    width: 100%;
+    align-items: center;
+}
+form .logout:hover {
+    border: 1px solid #d33;
+    background: white;
+    color: #d33 !important;
+}
+.link:not(.logout) {
+    display: flex;
+    gap: 10px;
+    color: #6e6868;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+}
+
+.navigation_bar {
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    color: #9d9a9a;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px #bfbdbd52;
+}
+
+.InputSearch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.InputSearch input {
+    border: none;
+    outline: none;
+}
+
+#ll img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hide {
+    display: none !important;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    -webkit-appearance: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #262626;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+input:checked[type="checkbox"]:before {
+    border-left: none;
+    border-top: none;
+    width: 20px;
+    border-color: rgb(24, 196, 24);
+    transform: rotate(45deg) translate(5px, -10px);
+}
+
+.medecin-patient {
+    padding: 0.5rem 0.75rem;
+    border: none;
+}
+
+.consultation-modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.consultation-modal div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputItem{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+}
+.inputItem input{
+    border: none;
+    outline: none;
+}
+.inputItem label{
+    margin-left: -30px;
+}
+.itemADitional{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+.itemADitional img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.itemADitional .itemimg{
+    
+}
