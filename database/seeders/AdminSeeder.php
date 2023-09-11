@@ -19,7 +19,7 @@ class AdminSeeder extends Seeder
         $data = ['Nom'=>'admin','Prenom'=>'admin','Email'=>'admin@admin.com','Tel'=>'0666666666','role_id'=>'1'];
         $employer = Employe::create($data);
         $role = Role::find(1);
-        $user = User::create(['name'=>"admin",'employe_id'=>$employer->id,'email'=>'admin@admin.com','role_id'=>1,'password'=>'12345678']);
+        $user = User::create(['name'=>"admin",'employe_id'=>$employer->id,'email'=>'admin@admin.com','role_id'=>1,'password'=>bcrypt('12345678')]);
         $user->assignRole($role);
     }
 
